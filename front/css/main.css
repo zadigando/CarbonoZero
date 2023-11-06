@@ -1,100 +1,63 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.foto {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.imagem {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.rodape {
+  background-color: #15b02e;
+  color: #15b02e;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
 }
 
 body {
-  font-size: 14px;
+  margin: 0px;
+}
+
+.circulo {
+  width: 400px;
+  height: 400px;
+  background-color: #15b02e;
+  border-radius: 50%;
+  position: relative;
+  left: -70px;
+  top: -102px;
+  transition: none 0s ease 0s;
+}
+
+.poligono {
+  position: relative;
+  left: 1266px;
+  top: -131px;
+}
+
+.poligono_menor {
+  position: relative;
+  left: 382px;
+  top: -437px;
 }
 
 .container {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #15b02f3a;
+  grid-row-start: -1;
 }
 
-.background-image {
-  flex: 1;
-  background: url("../images/v119_124.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.triangle {
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 87px solid rgba(21, 176, 46, 1);
+.retangulo {
   position: absolute;
-  top: 10%;
-  right: 10%;
+  left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
-}
-
-.content {
-  background: rgba(21, 176, 46, 0.85);
-  padding: 20px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.login-info {
-  color: #fff;
-  text-align: left;
-}
-
-.login-box {
-  background: rgba(255, 255, 255, 1);
-  border-radius: 10px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.field {
-  width: 100%;
-  margin: 10px 0;
-}
-
-.field-input {
-  width: 100%;
-  height: 50px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.login-button {
-  background: rgba(29, 78, 216, 1);
-  color: #fff;
-  width: 100%;
-  height: 50px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.company-icon {
-  width: 100px;
-  height: 100px;
-  background: url("icone-da-empresa.png");
-  background-size: contain;
-  background-repeat: no-repeat;
 }
