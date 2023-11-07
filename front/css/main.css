@@ -172,3 +172,10 @@ body {
   color: #ffffff;
   font-size: 20px;
 }
+
+.perfil_foto {
+  position: absolute;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -50%);
+}
