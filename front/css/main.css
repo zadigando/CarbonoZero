@@ -149,6 +149,7 @@ body {
   transform: translate(-50%, -50%);
   color: #1d4ed8;
   font-size: 18px;
+  text-decoration: none;
 }
 
 .h3_2 {
@@ -159,6 +160,7 @@ body {
   transform: translate(-50%, -50%);
   color: #1d4ed8;
   font-size: 18px;
+  text-decoration: none;
 }
 
 .botao_login {
@@ -172,12 +174,29 @@ body {
   border-radius: 10px;
   color: #ffffff;
   font-size: 20px;
+  text-decoration: none;
 }
 
 .perfil_foto {
   position: absolute;
   left: 57%;
   top: 45%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.icone_senha {
+  position: absolute;
+  left: 57%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+button {
+  position: absolute;
+  left: 57%;
+  top: 60%;
   transform: translate(-50%, -50%);
   z-index: 2;
 }
