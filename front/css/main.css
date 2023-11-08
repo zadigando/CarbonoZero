@@ -231,22 +231,18 @@ body {
 }
 
 .dados_retangulo_cadastro {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-right: 100px;
-  margin-top: -90px;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  left: 41%;
+  top: 20%;
 }
 
-.cadastro_usuario {
-  justify-items: right;
-  position: relative;
-  left: -705px;
-  top: -298px;
+.cadastro_usuario,
+.cadastro_cnpj,
+.cadastro_razao_social,
+.cadastro_email,
+.cadastro_telefone,
+.cadastro_senha {
+  margin: 0px 0px;
 }
 
 .h3_1_cadastro {
@@ -275,10 +271,6 @@ body {
 }
 
 .cadastro_cnpj {
-  justify-items: right;
-  position: relative;
-  left: -705px;
-  top: -298px;
 }
 
 .h3_2_cadastro {
@@ -307,10 +299,6 @@ body {
 }
 
 .cadastro_razao_social {
-  justify-items: right;
-  position: relative;
-  left: -705px;
-  top: -298px;
 }
 
 .h3_3_cadastro {
@@ -329,10 +317,6 @@ body {
 }
 
 .cadastro_email {
-  justify-items: right;
-  position: relative;
-  left: -705px;
-  top: -298px;
 }
 
 .h3_4_cadastro {
@@ -351,10 +335,6 @@ body {
 }
 
 .cadastro_telefone {
-  justify-items: right;
-  position: relative;
-  left: -705px;
-  top: -298px;
 }
 
 .h3_5_cadastro {
@@ -373,10 +353,6 @@ body {
 }
 
 .cadastro_senha {
-  justify-items: right;
-  position: relative;
-  left: -705px;
-  top: -298px;
 }
 
 .h3_6_cadastro {
@@ -411,29 +387,72 @@ body {
 
 .botao_cadastrar {
   font-family: "FonteNossaTmj", sans-serif;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background-color: #15b02e;
   padding: 20px 150px 20px 150px;
   border-radius: 10px;
   color: #ffffff;
   font-size: 20px;
   text-decoration: none;
-  margin-top: 100px;
+  position: relative;
+  left: -18.5em;
+  top: 5em;
 }
 
 .h1_1_cadastro {
   font-family: "FonteNossaTmj", sans-serif;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: rgba(0, 0, 0, 0.65);
-  margin-top: -430px;
+  position: absolute;
+  left: 40%;
+  top: 13%;
 }
 
 .container_cadastro {
   display: grid;
   grid-template-columns: 1fr;
   background-color: #15b02f3a;
+}
+.poligono_texto_cadastro {
+  position: absolute;
+  left: 80em;
+  top: 10em;
+}
+
+.h1_2_cadastro {
+  font-family: "FonteNossaTmj", sans-serif;
+  z-index: 2;
+  color: white;
+  position: relative;
+  left: 3em;
+  top: 8em;
+}
+
+.plataforma_cadastro {
+  position: absolute;
+  z-index: 2;
+  right: 8em;
+  top: 1em;
+}
+
+.circulo_cadastro {
+  width: 400px;
+  height: 400px;
+  background-color: #15b02e;
+  border-radius: 50%;
+  position: absolute;
+  left: -5%;
+  top: -10%;
+}
+
+.poligono_menor_cadastro {
+  position: absolute;
+  left: 19%;
+  top: 50%;
+}
+
+.foto_cadastro {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0%;
+  right: 0%;
 }
