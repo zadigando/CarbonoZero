@@ -1,2 +1,0 @@
-# CarbonoZero
-Projeto de PPP

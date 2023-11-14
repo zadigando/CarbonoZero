@@ -1,0 +1,103 @@
+.dashboard {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;    
+
+}
+
+ul{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 2em;
+}
+
+.sumario{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.painel{
+    width: 65vh;
+    font-size: 17px;
+    font-weight: 500;
+    background-color: #d3cbcb;
+    border-radius: 20px;
+    border: 2px solid #817E7E;
+    padding: 1.5em;
+    margin: 1em;
+    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.50));
+}
+
+button{
+    border: 2px outset rgb(66, 68, 67);
+    border-radius: 4px;
+    background-color: #14b32f;
+    color: white;
+    padding: 0.7em;
+    transition: transform 0.3s ease, background-color 0.3s ease, border-style 0.3s ease;
+}
+
+button:hover{
+    background-color: #119A28;
+    transform: scale(103%);
+}
+
+button:active{
+    transition: transform 40ms linear;
+    transform: scale(98%);
+    border-style: inset;
+}
+
+img{
+    width: 25em;
+}
+
+.grafico_gauge{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5em;
+    margin: 1em;
+    background-color: #d3cbcb;
+    border-radius: 20px;
+    border: 2px solid #817E7E;
+    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.50));
+}
+
+.grafico_texto{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.resumo_anual {
+    padding: 0.8em;
+    margin: 2em;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #d3cbcb;
+    border-radius: 6px;
+    border: 2px solid #817E7E;
+}
+
+.resumo_sumario{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.lista_resumo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.botao_resumo{
+    font-size: 20px;
+    padding: 1em;
+}
