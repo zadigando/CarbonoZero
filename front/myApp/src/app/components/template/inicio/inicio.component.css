@@ -1,0 +1,122 @@
+.painelcontroleimg {
+  width: 20em;
+  height: 10em;
+  background: lightgray 50% / cover no-repeat;
+}
+
+.painelcontrole {
+  border: 5px solid #000;
+  background: #fdf4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  width: 25em;
+  height: 15em;
+  border-radius: 8px;
+  margin-top: 3em;
+  text-decoration: none;
+}
+
+.painelcreditoimg {
+  width: 20em;
+  height: 10em;
+  background: lightgray 50% / cover no-repeat;
+}
+
+.painelcredito {
+  border: 5px solid #000;
+  background: #fdf4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  width: 25em;
+  height: 15em;
+  border-radius: 8px;
+  margin-top: 3em;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 1fr;
+}
+
+.rodape {
+  background-color: #15b02e;
+  color: #15b02e;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+}
+
+.imagemrecliclagem {
+  background: #fdf4f4;
+  width: 58.5625rem;
+  height: 33.3125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 20em;
+}
+
+.quemsomos {
+  background-color: #15b02e;
+  width: 58.5625rem;
+  height: 33.3125rem;
+  margin-top: 20em;
+}
+
+h1 {
+  color: #fff;
+  text-align: right;
+  font-family: FonteNossaTmj;
+  font-size: 3.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+p {
+  color: #000;
+  font-family: FonteNossaTmj;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+@font-face {
+  font-family: "FonteNossaTmj";
+  src: url("../font/PoetsenOne-Regular.ttf");
+}
+
+body {
+  font-family: FonteNossaTmj;
+}
+
+.redirecionarpainelcontrole,
+.redirecionarpainelcredito {
+  text-decoration: none;
+  color: #000;
+}

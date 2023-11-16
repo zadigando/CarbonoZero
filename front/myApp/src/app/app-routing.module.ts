@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BodyComponent } from './components/template/main/main.component';
+import {
+  BodyComponent,
+  MainComponent,
+} from './components/template/main/main.component';
 import { PainelControleComponent } from './components/template/painel-controle/painel-controle.component';
 import { CadastroComponent } from './components/template/cadastro/cadastro.component';
 import { LoginComponent } from './components/template/login/login.component';
+import { InicioComponent } from './components/template/inicio/inicio.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: LoginComponent,
+    component: InicioComponent,
   },
   {
     path: 'painel-controle',
@@ -17,6 +21,14 @@ const routes: Routes = [
   {
     path: 'cadastro',
     component: CadastroComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'painel-credito',
+    component: BodyComponent,
   },
 ];
 

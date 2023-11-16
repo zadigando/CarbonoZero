@@ -1,5 +1,5 @@
 <main>
-  <<<<<<< HEAD <div class="dashboard">
+  <div class="dashboard">
     <div class="painel">
       Painel Resumido
       <ul>
@@ -30,111 +30,63 @@
       </ul>
       <button href="" id="generateReportButton">Gerar Relatório</button>
     </div>
-
     <div class="grafico_gauge">
       <div id="chart">
-        <!--apx-chart
-=======
-    <div class="dashboard">
-        <div class="painel">
-            Painel Resumido
-            <ul>
-                <li class="sumario">
-                    <div>
-                        Total de emissões de carbono
-                    </div>
-                    <div>
-                        1,234,567 toneladas
-                    </div>
-                </li>
-                <li class="sumario">
-                    <div>
-                        Crédito de carbono adquirido
-                    </div>
-                    <div>
-                        789,123 créditos
-                    </div>
-                </li>
-                <li class="sumario">
-                    <div>
-                        Crédito de carbono utilizado
-                    </div>
-                    <div>
-                        456,789 créditos
-                    </div>
-                </li>
-            </ul>
-            <button href="" id="generateReportButton">Gerar Relatório</button>
-        </div>
-
-        <div class="grafico_gauge">
-            <div id="chart">
-                <apx-chart
->>>>>>> bc342adf4251b5b556f88235d3a142b6b0d1c16b
-                  [series]="chartOptions.series"
-                  [chart]="chartOptions.chart"
-                  [plotOptions]="chartOptions.plotOptions"
-                  [labels]="chartOptions.labels"
-                  [fill]="chartOptions.fill"
-                ></apx-chart-->
       </div>
-
-      <!--<img src="assets/Chart.png">-->
       <div class="grafico_texto">
         Nível de qualidade
       </div>
     </div>
-    </div>
+  </div>
+  <div class="resumo_anual">
+    Resumo por ano
+    <ul class="lista_resumo">
+      <li class="resumo_sumario">
+        <div>
+          Ano
+        </div>
+        <div>
+          2019
+        </div>
+        <div>
+          2020
+        </div>
+        <div>
+          2021
+        </div>
+      </li>
+      <li class="resumo_sumario">
+        <div>
+          Emissão de carbono
+        </div>
+        <div>
+          1,000,000 toneladas
+        </div>
+        <div>
+          1,200,000 toneladas
+        </div>
+        <div>
+          1,500,000 toneladas
+        </div>
+      </li>
+      <li class="resumo_sumario">
+        <div>
+          Total em créditos
+        </div>
+        <div>
+          500,000 créditos
+        </div>
+        <div>
+          600,000 créditos
+        </div>
+        <div>
+          800,000 créditos
+        </div>
+      </li>
+      <li class="resumo_sumario">
+        <button class="botao_resumo" href="" id="generateReportButton">Gerar Relatório</button>
+      </li>
 
-    <div class="resumo_anual">
-      Resumo por ano
-      <ul class="lista_resumo">
-        <li class="resumo_sumario">
-          <div>
-            Ano
-          </div>
-          <div>
-            2019
-          </div>
-          <div>
-            2020
-          </div>
-          <div>
-            2021
-          </div>
-        </li>
-        <li class="resumo_sumario">
-          <div>
-            Emissão de carbono
-          </div>
-          <div>
-            1,000,000 toneladas
-          </div>
-          <div>
-            1,200,000 toneladas
-          </div>
-          <div>
-            1,500,000 toneladas
-          </div>
-        </li>
-        <li class="resumo_sumario">
-          <div>
-            Total em créditos
-          </div>
-          <div>
-            500,000 créditos
-          </div>
-          <div>
-            600,000 créditos
-          </div>
-          <div>
-            800,000 créditos
-          </div>
-        </li>
-        <li class="resumo_sumario">
-          <button class="botao_resumo" href="" id="generateReportButton">Gerar Relatório</button>
-        </li>
-
-      </ul>
-    </div>
+    </ul>
+  </div>
 </main>

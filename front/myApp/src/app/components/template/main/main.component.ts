@@ -110,3 +110,4 @@ export class BodyComponent {
     };
   }
 }
+export class MainComponent {}
