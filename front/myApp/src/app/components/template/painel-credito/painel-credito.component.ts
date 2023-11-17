@@ -19,18 +19,20 @@ export type ChartOptions = {
 };
 
 @Component({
-  selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css']
+  selector: 'app-painel-credito',
+  templateUrl: './painel-credito.component.html',
+  styleUrls: ['./painel-credito.component.css']
 })
-export class BodyComponent {
+export class PainelCreditoComponent {
   @ViewChild("chart") chart!: ChartComponent;
   public chartOptions: Partial<ChartOptions> | any;
 
   constructor(private headerService: HeaderService) {
       headerService.headerData = {
-        title:'Painel de Controle',
-        link: '/painel-controle',
+        title_1:'Início',
+        link_1: '/',
+        title_2:'Painel de Controle',
+        link_2: '/painel-controle',
       }
 
     // Porcentagem atual (substitua pelo valor real desejado)

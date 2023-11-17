@@ -9,8 +9,10 @@ import { BehaviorSubject } from 'rxjs'
 export class HeaderService {
 
   private _headerData = new BehaviorSubject<HeaderData>({
-    title: 'Iníci',
-    link: ''
+    title_1: '',
+    link_1: '',
+    title_2: '',
+    link_2: ''
   })
 
   constructor() { }

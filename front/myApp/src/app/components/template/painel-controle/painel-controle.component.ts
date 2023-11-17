@@ -10,8 +10,10 @@ import { HeaderService } from '../header/header.service';
 export class PainelControleComponent {
   constructor(private router: Router, private headerService: HeaderService) {
     headerService.headerData = {
-      title:'Painel de Créditos',
-      link: '/',
+      title_1:'Início',
+      link_1: '/',
+      title_2:'Painel de Créditos',
+      link_2: '/painel-credito',
     }
   }
 }

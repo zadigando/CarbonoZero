@@ -7,17 +7,23 @@ import { HeaderComponent } from './components/template/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
-import { BodyComponent } from './components/template/main/main.component';
+import { PainelCreditoComponent } from './components/template/painel-credito/painel-credito.component';
 import { NgChartsModule } from 'ng2-charts';
 import { NgApexchartsModule } from "ng-apexcharts";
 import { PainelControleComponent } from './components/template/painel-controle/painel-controle.component';
+import { CadastroComponent } from './components/template/cadastro/cadastro.component';
+import { LoginComponent } from './components/template/login/login.component';
+import { InicioComponent } from './components/template/inicio/inicio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    BodyComponent,
+    PainelCreditoComponent,
     PainelControleComponent,
+    CadastroComponent,
+    LoginComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +32,7 @@ import { PainelControleComponent } from './components/template/painel-controle/p
     MatToolbarModule,
     MatCardModule,
     NgChartsModule,
-    NgApexchartsModule
+    NgApexchartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

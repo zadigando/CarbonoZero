@@ -10,12 +10,20 @@ export class HeaderComponent {
   constructor(private headerService: HeaderService){}
 
 
-  get title(): string {
-    return this.headerService.headerData.title
+  get title_1(): string {
+    return this.headerService.headerData.title_1
   }
 
-  get link(): string {
-    return this.headerService.headerData.link
+  get title_2(): string {
+    return this.headerService.headerData.title_2
+  }
+
+  get link_1(): string {
+    return this.headerService.headerData.link_1
+  }
+
+  get link_2(): string {
+    return this.headerService.headerData.link_2
   }
 
 }

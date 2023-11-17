@@ -1,17 +1,20 @@
+body{
+    height: auto;
+    background-image: url(/assets/Background.png);
+    background-size: cover;
+    font-family: "FonteNossaTmj", sans-serif;
+}
+
+@font-face {
+    font-family: "FonteNossaTmj";
+    src: url("../font/PoetsenOne-Regular.ttf");
+}
+
 .opcoes_projeto{
     padding: 0;
     list-style: none;
     display: flex;
     justify-content: space-around;
-}
-
-
-.opcoes_lista{
-    padding: 1em 2em 1em 2em;
-    font-size: 17px;
-    font-weight: 400;
-    background-color: #333232;
-    border-radius: 20px;
 }
 
 .opcoes_link{
@@ -20,6 +23,7 @@
 }
 
 button{
+    font-family: "FonteNossaTmj", sans-serif;
     font-size: 17px;
     font-weight: 400;
     border-radius: 20px;

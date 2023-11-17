@@ -1,3 +1,15 @@
+body{
+    height: auto;
+    background-image: url(/assets/Background.png);
+    background-size: cover;
+    font-family: "FonteNossaTmj", sans-serif;
+}
+
+@font-face {
+    font-family: "FonteNossaTmj";
+    src: url("../font/PoetsenOne-Regular.ttf");
+}
+
 .dashboard {
     display: flex;
     justify-content: space-around;
@@ -33,6 +45,7 @@ ul{
 }
 
 button{
+    font-family: "FonteNossaTmj", sans-serif;
     border: 2px outset rgb(66, 68, 67);
     border-radius: 4px;
     background-color: #14b32f;

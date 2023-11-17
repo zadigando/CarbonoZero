@@ -1,4 +1,6 @@
 export interface HeaderData{
-    title: string
-    link: string
+    title_1: string
+    title_2: string
+    link_1: string
+    link_2: string
 }
