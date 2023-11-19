@@ -16,6 +16,7 @@ import { LoginComponent } from './components/template/login/login.component';
 import { InicioComponent } from './components/template/inicio/inicio.component';
 import { EmpresaDataService } from './services/empresa.data-service';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     NgChartsModule,
     NgApexchartsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

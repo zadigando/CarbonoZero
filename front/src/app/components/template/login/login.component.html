@@ -1,4 +1,4 @@
-<form>
+<form [formGroup]="loginForm" (ngSubmit)="fazerLogin()">
 <body>
     <a href="/">
         <img src="assets/icone_melhor.png" class="foto" alt="Logo CarbonoZero">
@@ -17,18 +17,18 @@
             </li>
             <li class="login">
                 <h3 class="h4_2">Usuário</h3>
-                <input class="insira_usuario" placeholder="Insira seu usuário">
+                <input formControlName="usuario" class="insira_usuario" placeholder="Insira seu usuário">
             </li>
             <li class="login">
                 <h3 class="h4_3">Senha</h3>
-                <input type="password" class="insira_senha" placeholder="Insira sua senha">
+                <input formControlName="senha" type="password" class="insira_senha" placeholder="Insira sua senha">
             </li>
             <li class="conteudo_lista_rodape">
                 <a href='./' class="h3_1">Esqueci minha senha</a>
                 <a href='cadastro' class="h3_2">Primeiro acesso? Cadastre aqui</a>
             </li>
             <li class="conteudo_botao">
-                <button type="submit" formaction="http://localhost:4200/" class="botao_login">ENTRAR</button>
+                <button type="submit" class="botao_login">ENTRAR</button>
             </li>
         </ul>
     </div>

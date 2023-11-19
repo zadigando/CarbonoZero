@@ -2,28 +2,29 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Participante } from '../models/participante';
 
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 export class EmpresaDataService {
-  private apiUrl = 'https://localhost:7211'; // Replace with your actual API URL
+    private apiUrl = 'https://localhost:7211'; // Replace with your actual API URL
 
-  constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient) { }
 
-  postLogin(user: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/CarbonoZero/login`, user);
-  }
+    login(participanteLogin: Participante): Observable<any> {
+        return this.http.post<any>(`${this.apiUrl}/CarbonoZero/login`, participanteLogin);
+    }
 
-  cadastrar(empresa: any): Observable<any> {
-    return this.http.put(`${this.apiUrl}/CarbonoZero/Cadastro`, empresa);
-  }
-  
-  criarProjeto(projeto: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/CarbonoZero/Criar-projeto`, projeto);
-  }
+    cadastrar(participanteCadastro: Participante): Observable<any> {
+        return this.http.put(`${this.apiUrl}/CarbonoZero/Cadastro`, participanteCadastro);
+    }
 
-  deletarProjeto(projetoId: number): Observable<any> {
-    return this.http.delete(`${this.apiUrl}/CarbonoZero/Deletar-projeto/${projetoId}`);
-  }
+    criarProjeto(projeto: any): Observable<any> {
+        return this.http.post(`${this.apiUrl}/CarbonoZero/Criar-projeto`, projeto);
+    }
+
+    deletarProjeto(projetoId: number): Observable<any> {
+        return this.http.delete(`${this.apiUrl}/CarbonoZero/Deletar-projeto/${projetoId}`);
+    }
 }
