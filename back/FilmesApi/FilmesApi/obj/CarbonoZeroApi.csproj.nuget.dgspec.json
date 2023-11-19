@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leona\\source\\repos\\FilmesApi\\FilmesApi\\CarbonoZeroApi.csproj": {}
+    "C:\\Users\\luisa\\OneDrive\\Área de Trabalho\\Livia Git\\CarbonoZero\\back\\FilmesApi\\FilmesApi\\CarbonoZeroApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leona\\source\\repos\\FilmesApi\\FilmesApi\\CarbonoZeroApi.csproj": {
+    "C:\\Users\\luisa\\OneDrive\\Área de Trabalho\\Livia Git\\CarbonoZero\\back\\FilmesApi\\FilmesApi\\CarbonoZeroApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leona\\source\\repos\\FilmesApi\\FilmesApi\\CarbonoZeroApi.csproj",
+        "projectUniqueName": "C:\\Users\\luisa\\OneDrive\\Área de Trabalho\\Livia Git\\CarbonoZero\\back\\FilmesApi\\FilmesApi\\CarbonoZeroApi.csproj",
         "projectName": "CarbonoZeroApi",
-        "projectPath": "C:\\Users\\leona\\source\\repos\\FilmesApi\\FilmesApi\\CarbonoZeroApi.csproj",
-        "packagesPath": "C:\\Users\\leona\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leona\\source\\repos\\FilmesApi\\FilmesApi\\obj\\",
+        "projectPath": "C:\\Users\\luisa\\OneDrive\\Área de Trabalho\\Livia Git\\CarbonoZero\\back\\FilmesApi\\FilmesApi\\CarbonoZeroApi.csproj",
+        "packagesPath": "C:\\Users\\luisa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\luisa\\OneDrive\\Área de Trabalho\\Livia Git\\CarbonoZero\\back\\FilmesApi\\FilmesApi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\leona\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\luisa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -47,6 +52,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.1, )"
+            },
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -92,7 +101,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

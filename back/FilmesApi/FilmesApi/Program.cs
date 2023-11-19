@@ -10,8 +10,17 @@ builder.Services.AddDbContext<CarbonozeroContext>(opts => opts.UseMySql(connecti
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 // Add services to the container.
-
 builder.Services.AddControllers();
+
+// Configurar o CORS específico para o Angular
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngularDev",    
+        builder => builder.WithOrigins("http://localhost:4200/")
+                          .AllowAnyHeader()
+                          .AllowAnyMethod());
+});
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -26,6 +35,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// Configurar o CORS específico para o Angular
+app.UseCors("AllowAngularDev");
 
 app.UseAuthorization();
 
