@@ -1,0 +1,76 @@
+body{
+    height: auto;
+    background-image: url(/assets/Background.png);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "FonteNossaTmj", sans-serif;
+}
+
+@font-face {
+    font-family: "FonteNossaTmj";
+    src: url("../font/PoetsenOne-Regular.ttf");
+}
+
+.div_imagem{
+    display: flex;
+    justify-content: space-around;
+}
+
+.imagens_da_div{
+    height: 10em;
+}
+
+.imagem_separada{
+    background-color: #FFF3F3;
+    margin-top: 3em;
+    border-radius: 20px;
+    border: 2px solid black;
+    padding: 1.5em;
+}
+
+.imagem_texto{
+    font-size: 20px;
+    font-weight: 300;
+    padding-top: 0.5em;
+    margin: 0;
+    text-align: center;
+}
+
+.informacao{
+    display: flex;
+    margin-top: 10em;
+}
+
+.informacao_imagem{
+    background-color: black;
+}
+
+h3{
+    color: black;
+    text-align: center;
+    font-size: 30px;
+}
+
+p{
+    padding: 0 1em;
+}
+
+.informacao_texto{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 20px;
+    color: white;
+    background-color: #15b02e;
+}
+
+.imagem_eco{
+    padding: 0 8em;
+    height: 20em;
+}
+
+footer{
+    margin-top: 10em;
+    background-color: #15b02e;
+    padding: 1.3em;
+}
