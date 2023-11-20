@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { EmpresaDataService } from 'src/app/services/empresa.data-service';
 import { Participante } from 'src/app/models/participante';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,11 @@ import { Participante } from 'src/app/models/participante';
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
 
-  constructor(private fb: FormBuilder, private empresaDataService: EmpresaDataService) {}
+  constructor(
+    private fb: FormBuilder,
+    private empresaDataService: EmpresaDataService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -38,6 +43,7 @@ export class LoginComponent implements OnInit {
       this.empresaDataService.login(participante).subscribe(
         (response) => {
           console.log('Login bem-sucedido:', response.Mensagem);
+          this.router.navigate(['/']);
           // Realize ações necessárias após o login bem-sucedido
         },
         (error) => {

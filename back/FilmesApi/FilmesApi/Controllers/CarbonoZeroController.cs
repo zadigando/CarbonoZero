@@ -19,23 +19,22 @@ namespace CarbonoZeroApi.Controllers
         }
 
         [HttpPut("Cadastro")]
-        public IActionResult RegisterCompany([FromQuery] Participante participante)
+        public IActionResult RegisterCompany([FromBody] Participante participante)
         {
             if (participante != null)
             {
-                var participantes = _dbContext.Participantes
-                    .Where(x => x.CNPJ.Contains(participante.CNPJ));
+                var existingParticipante = _dbContext.Participantes.FirstOrDefault(x => x.CNPJ == participante.CNPJ);
 
-                if (participantes.Count() == 0)
+                if (existingParticipante != null)
+                {
+                    return BadRequest(new { Mensagem = "A empresa já está cadastrada no sistema." });
+                }
+                else
                 {
                     _dbContext.Participantes.Add(participante);
                     _dbContext.SaveChanges();
 
                     return Ok(new { Mensagem = "Empresa cadastrada com sucesso." });
-                }
-                else
-                {
-                    return BadRequest(new { Mensagem = "A empresa já está cadastrada no sistema." });
                 }
             }
             else

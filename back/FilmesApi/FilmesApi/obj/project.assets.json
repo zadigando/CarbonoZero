@@ -1859,24 +1859,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\luisa\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\PC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\luisa\\OneDrive\\Área de Trabalho\\Livia Git\\CarbonoZero\\back\\FilmesApi\\FilmesApi\\CarbonoZeroApi.csproj",
+      "projectUniqueName": "C:\\Projeto PPP\\back\\FilmesApi\\FilmesApi\\CarbonoZeroApi.csproj",
       "projectName": "CarbonoZeroApi",
-      "projectPath": "C:\\Users\\luisa\\OneDrive\\Área de Trabalho\\Livia Git\\CarbonoZero\\back\\FilmesApi\\FilmesApi\\CarbonoZeroApi.csproj",
-      "packagesPath": "C:\\Users\\luisa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\luisa\\OneDrive\\Área de Trabalho\\Livia Git\\CarbonoZero\\back\\FilmesApi\\FilmesApi\\obj\\",
+      "projectPath": "C:\\Projeto PPP\\back\\FilmesApi\\FilmesApi\\CarbonoZeroApi.csproj",
+      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+      "outputPath": "C:\\Projeto PPP\\back\\FilmesApi\\FilmesApi\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\luisa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1884,7 +1879,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1959,7 +1953,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\6.0.417\\RuntimeIdentifierGraph.json"
       }
     }
   }

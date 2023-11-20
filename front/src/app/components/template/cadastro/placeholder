@@ -1,0 +1,44 @@
+<body>
+    <div>
+        <!-- Seus elementos existentes -->
+    </div>
+    <div class="conteudo">
+        <ul class="conteudo_lista">
+            <li>
+                <h1 class="h1_1_cadastro">Preencha os dados <span class="span_1">ABAIXO</span></h1>
+            </li>
+            <li class="cadastro">
+                <h3 class="h3_1_cadastro">Usuário</h3>
+                <input class="insira_usuario_1" placeholder="Insira o Usuário" [(ngModel)]="novaEmpresa.nomeEmpresa">
+            </li>
+            <li class="cadastro">
+                <h3 class="h3_2_cadastro">CNPJ</h3>
+                <input class="insira_cnpj" placeholder="Insira o CNPJ" [(ngModel)]="novaEmpresa.cnpj">
+            </li>
+            <li class="cadastro">
+                <h3 class="h3_3_cadastro">Razão Social</h3>
+                <input class="insira_razao_social" placeholder="Insira a Razão Social" [(ngModel)]="novaEmpresa.setorEmpresa">
+            </li>
+            <li class="cadastro">
+                <h3 class="h3_4_cadastro">E-mail</h3>
+                <input class="insira_email_cadastro" placeholder="Insira seu E-mail" [(ngModel)]="novaEmpresa.email">
+            </li>
+            <li class="cadastro">
+                <h3 class="h3_5_cadastro">Telefone</h3>
+                <input type="tel" class="insira_telefone_cadastro" placeholder="Insira seu telefone" [(ngModel)]="novaEmpresa.telefone">
+            </li>
+            <li class="cadastro">
+                <h3 class="h3_6_cadastro">Defina uma senha</h3>
+                <input type="password" class="insira_senha_1" placeholder="Escolha uma senha" [(ngModel)]="novaEmpresa.senha">
+            </li>
+            <li class="cadastro">
+                <h3 class="h3_7_cadastro">Confirme sua senha</h3>
+                <input type="password" class="insira_senha_2" placeholder="Confirme sua senha" [(ngModel)]="novaEmpresa.confirmarSenha">
+            </li>
+            <li class="cadastro botao_cadastro">
+                <a (click)="cadastrarEmpresa()" class="botao_cadastrar">CADASTRAR</a>
+            </li>
+        </ul>
+    </div>
+    <footer></footer>
+</body>
