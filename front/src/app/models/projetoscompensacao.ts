@@ -1,5 +1,5 @@
-export interface ProjetosCompensacao {
-  id: number;
+export class ProjetosCompensacao {
+  id?: number;
   nomeProjeto?: string;
   descricaoProjeto?: string;
   dataInicio?: Date;

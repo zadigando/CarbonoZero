@@ -1,4 +1,5 @@
 
+<form [formGroup]="cadastroForm" (ngSubmit)="Cadastro()">
 <body>
     <div>
         <a href="/">
@@ -18,38 +19,33 @@
             </li>
             <li class="cadastro">
                 <h3 class="h3_1_cadastro">Usuário</h3>
-                <input class="insira_usuario_1" placeholder="Insira o Usuário">
+                <input formControlName="usuario" class="insira_usuario_1" placeholder="Insira o Usuário">
             </li>
             <li class="cadastro">
                 <h3 class="h3_2_cadastro">CNPJ</h3>
-                <input class="insira_cnpj" placeholder="Insira o CNPJ">
+                <input formControlName="cnpj" class="insira_cnpj" placeholder="Insira o CNPJ">
             </li>
             <li class="cadastro">
                 <h3 class="h3_3_cadastro">Razão Social</h3>
-                <input class="insira_razao_social" placeholder="Insira a Razão Social">
+                <input formControlName="razaoSocial" class="insira_razao_social" placeholder="Insira a Razão Social">
             </li>
             <li class="cadastro">
                 <h3 class="h3_4_cadastro">E-mail</h3>
-                <input class="insira_email_cadastro" placeholder="Insira seu E-mail">
+                <input formControlName="email" class="insira_email_cadastro" placeholder="Insira seu E-mail">
             </li>
             <li class="cadastro">
                 <h3 class="h3_5_cadastro">Telefone</h3>
-                <input type="tel" class="insira_telefone_cadastro" placeholder="Insira seu telefone">
+                <input formControlName="telefone" type="tel" class="insira_telefone_cadastro" placeholder="Insira seu telefone">
             </li>
             <li class="cadastro">
                 <h3 class="h3_6_cadastro">Defina uma senha</h3>
-                <input type="password" class="insira_senha_1" placeholder="Escolha uma senha">
-            </li>
-            <li class="cadastro">
-                <h3 class="h3_7_cadastro">Confirme sua senha</h3>
-                <input type="password" class="insira_senha_2" placeholder="Confirme sua senha">
+                <input formControlName="senha" type="password" class="insira_senha_1" placeholder="Escolha uma senha">
             </li>
             <li class="cadastro botao_cadastro">
-                <a>
-                    <button type="submit" formaction="http://localhost:4200/" (click)="cadastrar()" class="botao_cadastrar">CADASTRAR</button>
-                </a>
+                <button type="submit" class="botao_cadastrar">CADASTRAR</button>
             </li>
         </ul>
     </div>
     <footer></footer>
 </body>
+</form>

@@ -19,16 +19,16 @@ namespace CarbonoZeroApi.Controllers
         }
 
         [HttpPut("Cadastro")]
-        public IActionResult RegisterCompany([FromQuery] Empresa empresa)
+        public IActionResult RegisterCompany([FromQuery] Participante participante)
         {
-            if (empresa != null)
+            if (participante != null)
             {
-                var empresas = _dbContext.Empresas
-                    .Where(x => x.Cnpj.Contains(empresa.Cnpj));
+                var participantes = _dbContext.Participantes
+                    .Where(x => x.CNPJ.Contains(participante.CNPJ));
 
-                if (empresas.Count() == 0)
+                if (participantes.Count() == 0)
                 {
-                    _dbContext.Empresas.Add(empresa);
+                    _dbContext.Participantes.Add(participante);
                     _dbContext.SaveChanges();
 
                     return Ok(new { Mensagem = "Empresa cadastrada com sucesso." });

@@ -1,12 +1,15 @@
 import { Empresa } from './empresa'; // Importe o tipo Empresa
 
-export interface Participante {
-    id: number;
-    nome: string;
-    email: string;
-    senha: string;
-    tipo: string;
-    dataRegistro: Date;
-    empresas: Empresa[];
+export class Participante {
+    id?: number;
+    nome?: string;
+    CNPJ?: string;
+    razaoSocial?: string;
+    email?: string;
+    senha?: string;
+    telefone?: string;
+    tipo?: string;
+    dataRegistro?: Date;
+    empresas?: Empresa[];
 }
 

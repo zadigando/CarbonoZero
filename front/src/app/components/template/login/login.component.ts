@@ -25,6 +25,9 @@ export class LoginComponent implements OnInit {
       const participante: Participante = {
         id: 0,
         nome: '',
+        CNPJ: '',
+        razaoSocial: '',
+        telefone: '',
         email: this.loginForm.get('usuario')!.value,
         senha: this.loginForm.get('senha')!.value,
         tipo: '',
