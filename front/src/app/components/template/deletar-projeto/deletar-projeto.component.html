@@ -1,0 +1,19 @@
+<div>
+    <div class="conteudo_titulo">
+        <img src="assets/icone_melhor.png" class="foto_cadastro" alt="Logo CarbonoZero" routerLink="/">
+        Selecione o projeto que deseja deletar
+    </div>
+    <div>
+        <ul class="info_painel">
+            <li class="info_lista" *ngFor="let projeto of projetos">
+                <p>Id do Projeto: {{ projeto.id }}</p>
+                <p>Nome do Projeto: {{ projeto.nomeProjeto }}</p>
+                <p>Data de Criação: {{ projeto.dataInicio | date: 'dd/MM/yyyy' }}</p>
+                <div class="conteudo_botao">
+                    <button *ngIf="projeto.id !== undefined" (click)="deletarProjeto(projeto.id)" class="botao_cadastrar">DELETAR</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <footer></footer>
+</div>

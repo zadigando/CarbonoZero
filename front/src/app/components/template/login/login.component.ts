@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { EmpresaDataService } from 'src/app/services/empresa.data-service';
 import { Participante } from 'src/app/models/participante';
 import { Router } from '@angular/router';
+import { TokenStorageService } from 'src/app/services/token-service';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private empresaDataService: EmpresaDataService,
-    private router: Router
+    private router: Router,
+    private TokenStorageService: TokenStorageService
   ) {}
 
   ngOnInit(): void {
@@ -40,15 +42,23 @@ export class LoginComponent implements OnInit {
         empresas: [],
       };
 
+      const self = this;
+
       this.empresaDataService.login(participante).subscribe(
-        (response) => {
-          console.log('Login bem-sucedido:', response.Mensagem);
-          this.router.navigate(['/']);
-          // Realize ações necessárias após o login bem-sucedido
+        function (loginResponse: any) {
+          if (loginResponse && loginResponse.token) {
+            // Armazena o token usando o TokenStorageService
+            self.TokenStorageService.setToken(loginResponse.token);
+            console.log('Login bem-sucedido:', loginResponse.mensagem);
+            self.router.navigate(['/']);
+          } else {
+            console.error('Resposta de login inválida:', loginResponse);
+            // Lide com o erro ou redirecione para a página de login
+          }
         },
-        (error) => {
+        function (error) {
           console.error('Erro no login:', error);
-          // Trate o erro conforme necessário
+          // Lide com o erro ou redirecione para a página de login
         }
       );
     }

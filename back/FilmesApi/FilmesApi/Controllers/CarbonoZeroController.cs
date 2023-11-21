@@ -4,6 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Immutable;
 using System;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
+using CarbonoZeroApi.Services;
 
 namespace CarbonoZeroApi.Controllers
 {
@@ -46,18 +48,32 @@ namespace CarbonoZeroApi.Controllers
         [HttpPost("login")]
         public IActionResult Login([FromBody] Participante participante)
         {
-            var login = _dbContext.Participantes
-            .FirstOrDefault(u => u.Email == participante.Email && u.Senha == participante.Senha);
+            byte[] key = new byte[32];
+            using (var rng = new RNGCryptoServiceProvider())
+            {
+                rng.GetBytes(key);
+            }
+            string chaveSecreta = Convert.ToBase64String(key);
+
+            if (string.IsNullOrEmpty(chaveSecreta))
+            {
+                return StatusCode(500, new { Mensagem = "Chave secreta não definida." });
+            }
+
+            var login = _dbContext.Participantes.FirstOrDefault(u => u.Email == participante.Email && u.Senha == participante.Senha);
 
             if (login != null)
             {
-                return Ok(new { Mensagem = "Login bem-sucedido." });
+                var tokenService = new TokenService(chaveSecreta);
+                string token = tokenService.GenerateJwtToken(login.Email);
+                return Ok(new { Token = token, Mensagem = "Login bem-sucedido." });
             }
             else
             {
                 return Unauthorized(new { Mensagem = "Credenciais inválidas." });
             }
         }
+
 
         [HttpPost("Criar-projeto")]
         public IActionResult CreateProject([FromBody] ProjetosCompensacao projeto)
@@ -107,6 +123,32 @@ namespace CarbonoZeroApi.Controllers
         public IActionResult GetProjectDetails([FromQuery] ProjetosCompensacao projeto)
         {
             return Ok();
+        }
+
+        [HttpGet("Listar-projetos")]
+        public IActionResult GetProjects()
+        {
+            // Obter todos os projetos do banco de dados
+            var projetos = _dbContext.Projetoscompensacaos.ToList();
+
+            // Verificar se há projetos no banco de dados
+            if (projetos.Count > 0)
+            {
+                // Percorrer a lista e remover projetos com NomeProjeto vazio
+                projetos.RemoveAll(p => string.IsNullOrEmpty(p.NomeProjeto));
+
+                if (projetos.Count > 0)
+                {
+                    return Ok(new { Mensagem = "Projetos encontrados com sucesso.", Projetos = projetos });
+                }
+                else
+                {
+                    return NotFound(new { Mensagem = "Todos os projetos têm o campo NomeProjeto vazio." });
+                }
+            }
+
+            // Se não houver projetos, retornar uma mensagem adequada
+            return NotFound(new { Mensagem = "Nenhum projeto encontrado no banco de dados." });
         }
 
     }

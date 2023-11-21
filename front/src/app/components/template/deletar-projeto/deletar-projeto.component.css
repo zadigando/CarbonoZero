@@ -1,0 +1,106 @@
+body {
+  background-color: #15b02f3a;
+  font-family: "FonteNossaTmj", sans-serif;
+  height: auto;
+}
+
+@font-face {
+  font-family: "FonteNossaTmj";
+  src: url("../font/PoetsenOne-Regular.ttf");
+}
+
+.foto_cadastro {
+  height: 2.5em;
+}
+
+.conteudo_titulo {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "FonteNossaTmj", sans-serif;
+  background-color: rgb(25, 185, 52);
+  color: white;
+  padding: 0.5em;
+  font-size: 40px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  margin-bottom: 1.5em;
+  z-index: 1;
+}
+
+.conteudo_separado {
+  font-family: "FonteNossaTmj", sans-serif;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  margin: 2em 2em;
+  z-index: 1;
+  padding: 0.5em 1em;
+}
+
+.insercao {
+  font-size: 20px;
+  font-family: "FonteNossaTmj", sans-serif;
+  width: 100%;
+  border-top: 1px black;
+  border-left: 1px black;
+  border-right: 1px black;
+}
+
+.conteudo_botao {
+  text-align: center;
+  font-family: "FonteNossaTmj", sans-serif;
+  background-color: white;
+  padding: 2em;
+  z-index: 1;
+}
+
+.botao_cadastrar {
+  font-family: "FonteNossaTmj", sans-serif;
+  background-color: #15b02e;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 1em 6em;
+}
+
+.info_painel {
+  padding: 0;
+  list-style: none;
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.info_lista {
+  padding: 0 1.5em 0 1.5em;
+  margin: 0 3em 0 3em;
+  display: flex;
+  justify-content: space-between;
+  font-size: 17px;
+  font-weight: 500;
+  background-color: #d3cbcb;
+  border-radius: 5px;
+  border: 2px solid #817e7e;
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5));
+}
+
+.conteudo_botao {
+  text-align: center;
+  font-family: "FonteNossaTmj", sans-serif;
+  background-color: #d3cbcb;
+  padding: 1em;
+  z-index: 1;
+}
+
+.botao_cadastrar {
+  font-family: "FonteNossaTmj", sans-serif;
+  background-color: #15b02e;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 1em 6em;
+}

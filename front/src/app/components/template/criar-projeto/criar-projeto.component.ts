@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-criar-projeto',
   templateUrl: './criar-projeto.component.html',
-  styleUrls: ['./criar-projeto.component.css']
+  styleUrls: ['./criar-projeto.component.css'],
 })
 export class CriarProjetoComponent implements OnInit {
   projetoForm!: FormGroup;
@@ -36,7 +36,8 @@ export class CriarProjetoComponent implements OnInit {
       descricaoProjeto: this.projetoForm.get('descricaoProjeto')!.value,
       descricaoMedida: this.projetoForm.get('descricaoMedida')!.value,
       dataConclusao: this.projetoForm.get('dataConclusao')!.value,
-      impactoEmissaoCarbono: this.projetoForm.get('impactoEmissaoCarbono')!.value,
+      impactoEmissaoCarbono: this.projetoForm.get('impactoEmissaoCarbono')!
+        .value,
       dataInicio: new Date(Date.now()),
       dataMedida: new Date(Date.now()),
     };
