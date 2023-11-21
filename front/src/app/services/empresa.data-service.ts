@@ -12,6 +12,10 @@ export class EmpresaDataService {
 
     constructor(private http: HttpClient) { }
 
+    getProjetos(): Observable<any> {
+        return this.http.get<any>(`${this.apiUrl}/Listar-projetos`);
+    }
+
     login(participanteLogin: Participante): Observable<any> {
         return this.http.post<any>(`${this.apiUrl}/CarbonoZero/login`, participanteLogin);
     }

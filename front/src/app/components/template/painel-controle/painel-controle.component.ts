@@ -11,7 +11,8 @@ import { ProjetosCompensacao } from 'src/app/models/projetoscompensacao';
 })
 export class PainelControleComponent {
   projetoId: number | undefined;
-  
+  projetos: any[] = [];
+
   constructor(private router: Router, private headerService: HeaderService, private empresaDataService: EmpresaDataService) {
     headerService.headerData = {
       title_1:'Início',
@@ -20,6 +21,23 @@ export class PainelControleComponent {
       link_2: '/painel-credito',
     }
   }
+
+  ngOnInit(): void {
+    this.getProjetos();
+  }
+
+  getProjetos() {
+    this.empresaDataService.getProjetos().subscribe(
+      (data: any[]) => {
+        this.projetos = data;
+      },
+      error => {
+        console.error('Erro ao obter projetos:', error);
+      }
+    );
+  }
+
+
   criarProjeto() {
     const novoProjeto = {
       // Preencha com os dados do novo projeto, se necessário

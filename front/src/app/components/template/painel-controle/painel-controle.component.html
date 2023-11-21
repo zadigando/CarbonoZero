@@ -44,6 +44,13 @@
                 <p class="projeto_separado_texto">Descrição</p>
             </div>
         </div>
+        <div class="projetos">
+            <div *ngFor="let projeto of projetos" class="projeto_separado">
+              <h2 class="projeto_separdo_titulo">{{ projeto.nome }}</h2>
+              <p class="projeto_separado_texto">Data de início: {{ projeto.dataInicio }}</p>
+              <p class="projeto_separado_texto">{{ projeto.descricao }}</p>
+            </div>
+        </div>
 
         <div>
             <ul class="info_painel">
