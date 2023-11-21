@@ -17,6 +17,7 @@ import { InicioComponent } from './components/template/inicio/inicio.component';
 import { EmpresaDataService } from './services/empresa.data-service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CriarProjetoComponent } from './components/template/criar-projeto/criar-projeto.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CadastroComponent,
     LoginComponent,
     InicioComponent,
+    CriarProjetoComponent,
   ],
   imports: [
     BrowserModule,

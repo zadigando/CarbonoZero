@@ -5,6 +5,7 @@ import { PainelControleComponent } from './components/template/painel-controle/p
 import { CadastroComponent } from './components/template/cadastro/cadastro.component';
 import { LoginComponent } from './components/template/login/login.component';
 import { InicioComponent } from './components/template/inicio/inicio.component';
+import { CriarProjetoComponent } from './components/template/criar-projeto/criar-projeto.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: "",
     component: InicioComponent
+  },
+  {
+    path: 'criar-projeto',
+    component: CriarProjetoComponent
   }
 ];
 

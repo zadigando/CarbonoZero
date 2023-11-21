@@ -1,70 +1,79 @@
 <form>
-<body>
-    <app-header></app-header>
-    <main>
-        <div>
-            <ul class="opcoes_projeto">
-                <li>
-                    <button (click)="criarProjeto()">
-                        Criar Projeto
-                    </button>
-                </li>
-                <li>
-                    <button (click)="DeletaProjeto()">
-                        Deletar Projeto
-                    </button>
-                </li>
-                <li>
-                    <button href="">
-                        Exportar CSV
-                    </button>
-                </li>
-                <li>
-                    <button href="">
-                        Detalhes do Projeto
-                    </button>
-                </li>
-            </ul>
-        </div>
 
-        <div class="projetos">
-            <div class="projeto_separado">
-                <h2 class="projeto_separdo_titulo">PROJETO 1</h2>
-                <p class="projeto_separado_texto">Data de início: 01/06/2023</p>
-                <p class="projeto_separado_texto">Descrição</p>
+    <body>
+        <app-header></app-header>
+        <main>
+            <div>
+                <ul class="opcoes_projeto">
+                    <li>
+                        <button routerLink="/criar-projeto">
+                            Criar Projeto
+                        </button>
+                    </li>
+                    <li>
+                        <button>
+                            Deletar Projeto
+                        </button>
+                    </li>
+                    <li>
+                        <button href="">
+                            Exportar CSV
+                        </button>
+                    </li>
+                    <li>
+                        <button href="">
+                            Detalhes do Projeto
+                        </button>
+                    </li>
+                </ul>
             </div>
-            <div class="projeto_separado">
-                <h2 class="projeto_separdo_titulo">PROJETO 2</h2>
-                <p class="projeto_separado_texto">Data de início: 15/08/2023</p>
-                <p class="projeto_separado_texto">Descrição</p>
-            </div>
-            <div class="projeto_separado">
-                <h2 class="projeto_separdo_titulo">PROJETO 3</h2>
-                <p class="projeto_separado_texto">Data de início: 23/11/2023</p>
-                <p class="projeto_separado_texto">Descrição</p>
-            </div>
-        </div>
 
-        <div>
-            <ul class="info_painel">
-                <li class="info_lista">
-                    <p>Id do Projeto</p>
-                    <p>Nome do Projeto</p>
-                    <p>Data de Criação</p>
-                </li>
-                <li class="info_lista">
-                    <p>Id do Projeto</p>
-                    <p>Nome do Projeto</p>
-                    <p>Data de Criação</p>
-                </li>
-                <li class="info_lista">
-                    <p>Id do Projeto</p>
-                    <p>Nome do Projeto</p>
-                    <p>Data de Criação</p>
-                </li>
-            </ul>
-        </div>
-    </main>
-    <router-outlet></router-outlet>
-</body>
+            <div class="projetos">
+                <div class="projeto_separado">
+                    <h2 class="projeto_separdo_titulo">PROJETO 1</h2>
+                    <p class="projeto_separado_texto">Data de início: 01/06/2023</p>
+                    <p class="projeto_separado_texto">Descrição</p>
+                </div>
+                <div class="projeto_separado">
+                    <h2 class="projeto_separdo_titulo">PROJETO 2</h2>
+                    <p class="projeto_separado_texto">Data de início: 15/08/2023</p>
+                    <p class="projeto_separado_texto">Descrição</p>
+                </div>
+                <div class="projeto_separado">
+                    <h2 class="projeto_separdo_titulo">PROJETO 3</h2>
+                    <p class="projeto_separado_texto">Data de início: 23/11/2023</p>
+                    <p class="projeto_separado_texto">Descrição</p>
+                </div>
+
+            </div>
+            <div class="projetos">
+                <div class="projeto_separado" *ngFor="let projeto of projetos">
+                    <h2 class="projeto_separdo_titulo">{{ projeto.nomeProjeto }}</h2>
+                    <p class="projeto_separado_texto">Data de início: {{ projeto.dataInicio | date: 'dd/MM/yyyy' }}</p>
+                    <p class="projeto_separado_texto">{{ projeto.descricaoProjeto }}</p>
+                </div>
+            </div>
+
+            <div>
+                <ul class="info_painel">
+                    <li class="info_lista">
+                        <p>Id do Projeto</p>
+                        <p>Nome do Projeto</p>
+                        <p>Data de Criação</p>
+                    </li>
+                    <li class="info_lista">
+                        <p>Id do Projeto</p>
+                        <p>Nome do Projeto</p>
+                        <p>Data de Criação</p>
+                    </li>
+                    <li class="info_lista">
+                        <p>Id do Projeto</p>
+                        <p>Nome do Projeto</p>
+                        <p>Data de Criação</p>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <router-outlet></router-outlet>
+    </body>
 </form>

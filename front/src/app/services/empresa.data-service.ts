@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Participante } from '../models/participante';
+import { ProjetosCompensacao, ProjetosCompensacaoResponse } from '../models/projetoscompensacao';
 
 @Injectable({
     providedIn: 'root',
@@ -12,6 +13,10 @@ export class EmpresaDataService {
 
     constructor(private http: HttpClient) { }
 
+    getProjetos(): Observable<ProjetosCompensacaoResponse> {
+        return this.http.get<ProjetosCompensacaoResponse>(`${this.apiUrl}/CarbonoZero/Listar-projetos`);
+    }
+
     login(participanteLogin: Participante): Observable<any> {
         return this.http.post<any>(`${this.apiUrl}/CarbonoZero/login`, participanteLogin);
     }
@@ -20,8 +25,8 @@ export class EmpresaDataService {
         return this.http.put(`${this.apiUrl}/CarbonoZero/Cadastro`, participanteCadastro);
     }
 
-    criarProjeto(projeto: any): Observable<any> {
-        return this.http.post(`${this.apiUrl}/CarbonoZero/Criar-projeto`, projeto);
+    criarProjeto(criarProjeto: ProjetosCompensacao): Observable<any> {
+        return this.http.post(`${this.apiUrl}/CarbonoZero/Criar-projeto`, criarProjeto);
     }
 
     deletarProjeto(projetoId: number): Observable<any> {
