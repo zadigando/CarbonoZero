@@ -1,0 +1,44 @@
+<form>
+
+    <body>
+        <app-header></app-header>
+        <main>
+            <div>
+                <ul class="opcoes_projeto">
+                    <li>
+                        <button routerLink="/criar-projeto">
+                            Criar Projeto
+                        </button>
+                    </li>
+                    <li>
+                        <button routerLink="/deletar-projeto">
+                            Deletar Projeto
+                        </button>
+                    </li>
+                    <li>
+                        <button (click)="exportarDadosParaCSV()">
+                            Exportar CSV
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="projetos">
+                <div class="projeto_separado" *ngFor="let projeto of projetos">
+                    <h2 class="projeto_separdo_titulo">{{ projeto.nomeProjeto }}</h2>
+                    <p class="projeto_separado_texto">Data de início: {{ projeto.dataInicio | date: 'dd/MM/yyyy' }}</p>
+                    <p class="projeto_separado_texto">{{ projeto.descricaoProjeto }}</p>
+                </div>
+            </div>
+            <div>
+                <ul class="info_painel">
+                    <li class="info_lista" *ngFor="let projeto of projetos">
+                        <p>Id do Projeto: {{ projeto.id }}</p>
+                        <p>Nome do Projeto: {{ projeto.nomeProjeto }}</p>
+                        <p>Data de Criação: {{ projeto.dataInicio | date: 'dd/MM/yyyy' }}</p>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <router-outlet></router-outlet>
+    </body>
+</form>

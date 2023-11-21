@@ -1,0 +1,93 @@
+body{
+    height: auto;
+    background-image: url(/assets/Background.png);
+    background-size: cover;
+    font-family: "FonteNossaTmj", sans-serif;
+}
+
+@font-face {
+    font-family: "FonteNossaTmj";
+    src: url("../font/PoetsenOne-Regular.ttf");
+}
+
+.opcoes_projeto{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.opcoes_link{
+    color: white;
+    text-decoration: none;
+}
+
+button{
+    font-family: "FonteNossaTmj", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    border-radius: 20px;
+    border: none;
+    background-color: #333232;
+    color: white;
+    padding: 1em 2em 1em 2em;
+    transition: transform 0.3s ease;
+}
+
+button:hover{
+    transform: scale(103%);
+}
+
+button:active{
+    transition: transform 40ms linear;
+    transform: scale(98%);
+}
+
+.projetos{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.projeto_separdo_titulo{
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.projeto_separado_texto{
+    font-size: 14px;
+}
+
+.projeto_separado{
+    width: 30vh;
+    font-size: 17px;
+    font-weight: 500;
+    background-color: #d3cbcb;
+    border-radius: 20px;
+    border: 2px solid #817E7E;
+    padding: 1.5em;
+    margin: 1em;
+    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.50));
+}
+
+
+.info_painel{
+    padding: 0;
+    list-style: none;
+    gap: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.info_lista{
+    padding: 0 1.5em 0 1.5em;
+    margin: 0 3em 0 3em;
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    font-weight: 500;
+    background-color: #d3cbcb;
+    border-radius: 5px;
+    border: 2px solid #817E7E;
+    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.50));
+}

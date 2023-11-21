@@ -1,0 +1,38 @@
+<form [formGroup]="loginForm" (ngSubmit)="fazerLogin()">
+<body>
+    <a href="/">
+        <img src="assets/icone_melhor.png" class="foto" alt="Logo CarbonoZero">
+    </a>
+    <div class="circulo"></div>
+    <img src="assets/poligono_menor.svg" class="poligono_menor">
+    <div class="poligono_texto">
+        <img src="assets/poligono.svg" class="poligono">
+        <h1 class="h1_2">Faça o login em nossa <span class="plataforma">Plataforma!</span></h1>
+    </div>
+    <div class="conteudo">
+        <ul class="conteudo_lista">
+            <li class="conteudo_lista_titulo">
+                <h1 class="h1_1">Bem vindo ao <span class="span_1">LOGIN</span></h1>
+                <h4 class="h4_1">Preencha os dados do login para acessar</h4>
+            </li>
+            <li class="login">
+                <h3 class="h4_2">Email</h3>
+                <input formControlName="usuario" class="insira_usuario" placeholder="Insira seu email">
+            </li>
+            <li class="login">
+                <h3 class="h4_3">Senha</h3>
+                <input formControlName="senha" type="password" class="insira_senha" placeholder="Insira sua senha">
+            </li>
+            <li class="conteudo_lista_rodape">
+                <a href='./' class="h3_1">Esqueci minha senha</a>
+                <a href='cadastro' class="h3_2">Primeiro acesso? Cadastre aqui</a>
+            </li>
+            <li class="conteudo_botao">
+                <button type="submit" class="botao_login">ENTRAR</button>
+            </li>
+        </ul>
+    </div>
+    <footer></footer>
+
+</body>
+</form>

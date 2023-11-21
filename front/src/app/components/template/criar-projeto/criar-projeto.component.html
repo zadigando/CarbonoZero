@@ -1,0 +1,40 @@
+<form [formGroup]="projetoForm" (ngSubmit)="CriarProjeto()">
+
+    <body>
+        <div>
+            <div class="conteudo_titulo ">
+                <img src="assets/icone_melhor.png" class="foto_cadastro" alt="Logo CarbonoZero" routerLink="/">
+                Preencha os dados para criar o projeto
+            </div>
+            <div class="conteudo_separado">
+                <h3 class="conteudo_texto">Nome</h3>
+                <input formControlName="nomeProjeto" class="insercao" placeholder="Insira o nome">
+            </div>
+
+            <div class="conteudo_separado ">
+                <h3 class="conteudo_texto">Descrição</h3>
+                <input formControlName="descricaoProjeto" class="insercao" placeholder="Insira a descrição">
+            </div>
+
+            <div class="conteudo_separado ">
+                <h3 class="conteudo_texto">Descrição resumida</h3>
+                <input formControlName="descricaoMedida" class="insercao" placeholder="Insira uma descrição resumida">
+            </div>
+
+            <div class="conteudo_separado ">
+                <h3 class="conteudo_texto">Data de conclusão</h3>
+                <input formControlName="dataConclusao" class="insercao" placeholder="Insira a data de conclusão">
+            </div>
+
+            <div class="conteudo_separado ">
+                <h3 class="conteudo_texto">Redução estimada</h3>
+                <input formControlName="impactoEmissaoCarbono" type="tel" class="insercao" placeholder="Insira a redução estimada">
+            </div>
+
+            <div class="conteudo_botao ">
+                <button type="submit" class="botao_cadastrar">CADASTRAR</button>
+            </div>
+        </div>
+        <footer></footer>
+    </body>
+</form>

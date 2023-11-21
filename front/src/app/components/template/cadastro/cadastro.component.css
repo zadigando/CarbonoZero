@@ -1,0 +1,143 @@
+@font-face {
+    font-family: "FonteNossaTmj";
+    src: url("../font/PoetsenOne-Regular.ttf");
+}
+
+body {
+    background-color: #15b02f3a;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.foto_cadastro {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 8.5em;
+}
+
+.circulo_cadastro {
+    width: 17em;
+    height: 17em;
+    background-color: #15b02e;
+    border-radius: 50%;
+    position: absolute;
+    left: -3em;
+    top: -5.5em;
+}
+
+.poligono_menor_cadastro {
+    width: 17em;
+    display: block;
+    position: absolute;
+    bottom: 3em;
+    left: 8em;
+}
+
+footer {
+    background-color: #15b02e;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 3vh;
+}
+
+.poligono_texto_cadastro {
+    position: absolute;
+    display: inline-block;
+    right: 1em;
+    bottom: 5em;
+}
+
+.poligono_cadastro {
+    width: 23em;
+    height: auto;
+    display: block;
+}
+
+.h1_2_cadastro {
+    width: 80%;
+    text-align: center;
+    font-family: "FonteNossaTmj", sans-serif;
+    font-size: 23px;
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.conteudo{
+    color: rgba(0, 0, 0, 0.65);
+    font-family: "FonteNossaTmj", sans-serif;;
+    background-color: white;
+    border-radius:10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    margin: 3.5em;
+    width: 27em;
+    height: 35em;
+    z-index: 1;
+}
+
+.span_1{
+    color: #15b02e;
+}
+
+.conteudo_lista{
+    padding: 1em 5em;
+    list-style: none;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.insira_usuario_1,
+.insira_senha_1,
+.insira_senha_2,
+.insira_cnpj,
+.insira_razao_social,
+.insira_email_cadastro,
+.insira_telefone_cadastro{
+    font-size: 10px;
+    font-family: "FonteNossaTmj", sans-serif;
+    width: 200px;
+    border-top: 1px black;
+    border-left: 1px black;
+    border-right: 1px black;
+    
+}
+
+.insira_usuario_1::placeholder{
+    background: url("../../../../assets/perfil.svg") no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
+.insira_senha_1::placeholder{
+    background: url("../../../../assets/icone_senha.svg") no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
+.insira_senha_2::placeholder{
+    background: url("../../../../assets/icone_senha.svg") no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
+.botao_cadastrar {
+    font-family: "FonteNossaTmj", sans-serif;
+    background-color: #15b02e;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 13px;
+    text-decoration: none;
+    padding: 1em 6em;
+}
+
+.botao_cadastro{
+    margin-top: 0.5em;
+}
